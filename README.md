@@ -16,6 +16,7 @@ This command will build Node.js API and launch docker container [mongo](https://
 ### Node.js API
 
 | Method | URL | Sample Data |
+|------- | --- | ----------- |
 | GET | http://localhost:3000/tasks | |
 | POST | http://localhost:3000/tasks | `{"name":"Fix issue 1"}`|
 | GET | http://localhost:3000/tasks/1 | |
@@ -24,7 +25,7 @@ This command will build Node.js API and launch docker container [mongo](https://
 
 ### Mongo Express Dashboard
 
-[http://localhost:8081](http://localhost:8081)
+Open browser with [http://localhost:8081](http://localhost:8081)
 
 ## Troubleshooting
 
