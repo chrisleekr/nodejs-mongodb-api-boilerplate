@@ -1,0 +1,33 @@
+{
+  "name": "nodejs-mongo-api-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate for Node.js RESTful API with MongoDB",
+  "scripts": {
+    "start": "nodemon server.js",
+    "lint": "standard",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "RESTful",
+    "Node.js",
+    "MongoDB",
+    "Mongoose",
+    "Boilerplate"
+  ],
+  "author": "Chris Lee",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.5",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.9"
+  }
+}
