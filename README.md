@@ -1,4 +1,4 @@
-# Node.js + MongoDB API Boilerplate
+# Node.js + MongoDB RESTful API Boilerplate
 
 This is a sample project that I followed the tutorial [Build Node.js RESTful APIs in 10 Minutes](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd) written by Olatunde Garuba.
 
