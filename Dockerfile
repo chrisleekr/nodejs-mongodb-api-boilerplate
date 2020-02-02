@@ -1,7 +1,7 @@
-FROM node:8.12.0-alpine
+FROM node:13-alpine
 
-# Create app directory
-WORKDIR /usr/src/app
+# Create srv directory
+WORKDIR /srv
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
