@@ -17,7 +17,8 @@ mongoose.Promise = global.Promise;
 mongoose
   .connect('mongodb://root:root@mongo:27017/TodoDB?authSource=admin&w=1', {
     auth: { authdb: 'admin' },
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
   })
   .catch(err => {
     console.log('Unable to connect', err);
