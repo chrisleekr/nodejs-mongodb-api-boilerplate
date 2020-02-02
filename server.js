@@ -14,14 +14,23 @@ const bodyParser = require('body-parser')
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://root:root@mongo:27017/TodoDB', { auth: { authdb: 'admin' }, useNewUrlParser: true })
+mongoose.connect('mongodb://root:root@mongo:27017/TodoDB?authSource=admin&w=1', { auth: { authdb: 'admin' }, useNewUrlParser: true })
+    .catch((err) => {
+        console.log("Unable to connect", err);
+    });
 
-app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json())
 
-const routes = require('./api/routes/todoListRoutes') // importing route
-routes(app) // register the route
+    app.use(bodyParser.urlencoded({ extended: true }))
+    app.use(bodyParser.json())
 
-app.listen(port)
+    app.get('/', (req, res) => {
+        res.send("Hello");
+    });
 
-console.log('Node.js + MongoDB RESTful API server started on: ' + port)
+    const routes = require('./api/routes/todoListRoutes') // importing route
+    routes(app) // register the route
+
+    app.listen(port, () => {
+        console.log('Node.js + MongoDB RESTful API server started on: ' + port)
+    });
+
