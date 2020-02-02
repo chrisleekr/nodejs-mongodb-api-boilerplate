@@ -1,6 +1,6 @@
-'use strict'
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+'use strict';
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
   name: {
@@ -12,12 +12,14 @@ const TaskSchema = new Schema({
     default: Date.now
   },
   status: {
-    type: [{
-      type: String,
-      enum: ['pending', 'ongoing', 'completed']
-    }],
+    type: [
+      {
+        type: String,
+        enum: ['pending', 'ongoing', 'completed']
+      }
+    ],
     default: ['pending']
   }
-})
+});
 
-module.exports = mongoose.model('Tasks', TaskSchema)
+module.exports = mongoose.model('Tasks', TaskSchema);

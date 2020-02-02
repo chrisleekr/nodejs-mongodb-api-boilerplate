@@ -3,8 +3,8 @@ version: '3.7'
 services:
   api:
     build:
-      context: .    
-    container_name: api  
+      context: .
+    container_name: api
     depends_on:
       - mongo
     networks:
@@ -12,8 +12,8 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./server.js:/usr/src/app/server.js
-      - ./api:/usr/src/app/api
+      - ./server.js:/srv/server.js
+      - ./api:/srv/api
 
   mongo:
     image: mongo:4.1.4-xenial
@@ -48,6 +48,6 @@ services:
 networks:
   internal:
     driver: bridge
-    
+
 volumes:
   mongo_data:
